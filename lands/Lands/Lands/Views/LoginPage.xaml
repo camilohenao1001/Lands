@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lands.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="SION - Sistema de Información Organizacional">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" BindingContext="{Binding Login}">
+
+                <Label 
+                    Text="Coporación Universitaria Adventista" 
+                    FontFamily="Century Gothic" 
+                    FontSize="40" 
+                    FontAttributes="Bold" 
+                    HorizontalTextAlignment="Center"/>
+                <Image 
+                    Source="logosionconLetra" 
+                    WidthRequest="200">
+                </Image>
+                <Label 
+                    Text="Ingrese su usuario de SION o Campus Virtual"
+                    HorizontalTextAlignment="Center">
+                </Label>
+                <Entry 
+                    Placeholder="Usuario" 
+                    Text="{Binding Usuario, Mode=TwoWay}">
+                </Entry>
+                <Entry 
+                    Placeholder="Clave" 
+                    IsPassword="True" 
+                    Text="{Binding Clave, Mode=TwoWay}">
+                </Entry>
+                <ActivityIndicator 
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}">
+                </ActivityIndicator>
+                <StackLayout 
+                    Orientation="Horizontal">
+                    <Label 
+                        Text="Recordarme" 
+                        VerticalOptions="Center"
+                        HorizontalOptions="End" 
+                        FontSize="20"
+                        FontAttributes="Bold">
+                    </Label>
+                    <Switch
+                        HorizontalOptions="End"
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay}">
+                    </Switch>
+                </StackLayout>
+                <Label
+                    Text="¿Olvidaste tu contraseña?"
+                    HorizontalOptions="Center"
+                    TextColor="Blue">
+                </Label>
+                <Button 
+                    Text="Iniciar"
+                    BackgroundColor="#37bc9b"
+                    TextColor="White"
+                    BorderRadius="15"
+                    Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                </Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

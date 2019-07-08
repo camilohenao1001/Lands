@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lands.Views.LandPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Información País"
+             Icon="ic_Info">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Land}">
+            <StackLayout
+                Padding="5">
+                <Label 
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Land.Name}"
+                    TextColor="Black"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Capital:"
+                        TextColor="Black"
+                        FontAttributes="Bold"></Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="{Binding Land.Capital}"
+                        TextColor="Blue"
+                        FontAttributes="Italic"></Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Población:"
+                        TextColor="Black"
+                        FontAttributes="Bold"></Label>
+                    <Label 
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="{Binding Land.Population, StringFormat='{0:N0}'}"
+                        TextColor="Blue"
+                        FontAttributes="Italic"></Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Área:"
+                        FontAttributes="Bold"
+                        TextColor="Black"></Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="{Binding Land.Area, StringFormat='{0:N0}'}"
+                        TextColor="Blue"
+                        FontAttributes="Italic"></Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="Código 2:"
+                        TextColor="Black"
+                        FontAttributes="Bold"></Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Text="{Binding Land.Alpha2Code}"
+                        TextColor="Blue"
+                        FontAttributes="Italic"></Label>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
