@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -29,7 +30,7 @@ namespace Lands.Droid
 
         async void StartUp()
         {
-            await Task.Delay(5000);
+            await Task.Delay(1000);
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
     }

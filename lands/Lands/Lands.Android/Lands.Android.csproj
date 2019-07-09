@@ -89,9 +89,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splash_SION.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Lands\Lands.csproj">
       <Project>{B720D5C8-B3B1-4C5C-B0CA-CAC06B43C13C}</Project>
       <Name>Lands</Name>
@@ -144,9 +141,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\splash_SION.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\splash_SION.png" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\splash_SION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ldpi\splash_SION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\splash_SION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable\splash_SION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-hdpi\splash_SION.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
