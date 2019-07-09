@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="SION - Sistema de Información Organizacional">
+             Title="SION - Estudiantes">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20" BindingContext="{Binding Login}">
 
-                <Label 
+                <!--<Label 
                     Text="Coporación Universitaria Adventista" 
                     FontFamily="Century Gothic" 
                     FontSize="40" 
                     FontAttributes="Bold" 
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Center"/>-->
                 <Image 
                     Source="logosionconLetra" 
                     WidthRequest="200">
